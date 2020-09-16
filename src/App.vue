@@ -1,32 +1,59 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
     <router-view />
   </div>
 </template>
 
 <style>
+:root {
+  --main-color-text: #6a6e73;
+  --header-color-text: #222;
+  --border-color: #c9ced4;
+  --link-color-text: #467fbf;
+  --bg-color: #f0f2f5;
+  --icons-accent-color: #749fcf;
+}
+body {
+  min-width: 260px;
+  background: var(--bg-color);
+  font-size: 10px;
+}
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Archivo Narrow', Arial, Helvetica, sans-serif;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  color: var(--main-color-text);
 }
 
-#nav {
-  padding: 30px;
+h1,
+h2,
+h3 {
+  color: var(--header-color-text);
 }
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+h1 {
+  font-size: 3em;
 }
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+h2,
+h3 {
+  font-size: 2.2em;
+}
+ul {
+  padding: 0;
+  list-style: none;
+}
+button {
+  cursor: pointer;
+}
+button:hover {
+  opacity: 0.8;
+}
+@media screen and (max-width: 960px) {
+  body {
+    font-size: 8px;
+  }
+  h1 {
+    font-size: 2.5em;
+  }
 }
 </style>
